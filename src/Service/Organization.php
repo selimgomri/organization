@@ -23,4 +23,13 @@ class Organization
 
         return file_put_contents('../test_back/organizations.yaml', $yaml);
     }
+
+    public function toEditOrganization(int $id)
+    {
+        $datas = Organization::getOrganization();
+        $datas=$datas['organizations'];
+        $datas=$datas[$id];
+        
+        return $datas;
+    }
 }

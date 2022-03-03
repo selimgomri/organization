@@ -18,6 +18,9 @@
 					Description
 				</th>
 				<th scope="col">
+					Edit
+				</th>
+				<th scope="col">
 					Delete
 				</th>
 			</tr>
@@ -30,8 +33,12 @@
 					<td>{{data.description}}</td>
 					<td>
 						<button>
+							<a href="edit/{{loop.index0}}">Edit</a>
+						</button>
+					</td>
+					<td>
+						<button>
 							<a href="delete/{{loop.index0}}">Delete</a>
-
 						</button>
 					</td>
 				</tr>
