@@ -5,13 +5,13 @@
 
 {% block body %}
 	<h1>Organisations</h1>
-	<table>
+	<table class="table">
 		<thead>
 			<tr>
-				<th>
+				<th scope="col">
 					Name
 				</th>
-				<th>
+				<th scope="col">
 					Description
 				</th>
 			</tr>
@@ -22,7 +22,8 @@
 					<td>{{data.name}}</td>
 					<td>{{data.description}}</td>
 				</tr>
-			</tr>
+				{% else %}No data found
+			{% endfor %}
 		</tbody>
-	</tr>
-</tbody></td>{% else %}No data found{% endfor %}</tbody></table>{% endblock %}
+	</table>
+{% endblock %}
