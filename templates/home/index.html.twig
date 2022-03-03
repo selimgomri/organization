@@ -4,22 +4,25 @@
 {% endblock %}
 
 {% block body %}
-	<style>
-		.example-wrapper {
-			margin: 1em auto;
-			max-width: 800px;
-			width: 95%;
-			font: 18px / 1.5 sans-serif;
-		}
-		.example-wrapper code {
-			background: #F5F5F5;
-			padding: 2px 6px;
-		}
-	</style>
-
-	<div class="example-wrapper">
-		<h1>
-			{{ display }}</h1>
-
-	</div>
-{% endblock %}
+	<h1>Organisations</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					Description
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for data in datas %}
+				<tr>
+					<td>{{data.name}}</td>
+					<td>{{data.description}}</td>
+				</tr>
+			</tr>
+		</tbody>
+	</tr>
+</tbody></td>{% else %}No data found{% endfor %}</tbody></table>{% endblock %}
